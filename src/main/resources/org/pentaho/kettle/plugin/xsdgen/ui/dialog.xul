@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<dialog id="xsdgen-step-dialog"
+        pack="true"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:pen="http://www.pentaho.org/2008/xul"
+        title="${xsdgen.Shell.Title}"
+        resizable="true"
+        height="250" width="600"
+        appicon="ui/images/spoon.ico"
+        buttons="extra1,accept,cancel"
+        buttonalign="end"
+        buttonlabelextra1="${Dialog.Help}"
+        buttonlabelaccept="${Dialog.Accept}"
+        buttonlabelcancel="${Dialog.Cancel}"
+        ondialogextra1="handler.onHelp()"
+        ondialogaccept="handler.onAccept()"
+        ondialogcancel="handler.onCancel()">
+
+    <vbox>
+
+        <grid>
+            <columns>
+                <column/>
+                <column flex="1"/>
+            </columns>
+            <rows>
+                <row>
+                    <label value="${XsdGenStep.Name}"/>
+                    <textbox id="step-name" flex="1" multiline="false"/>
+                </row>
+            </rows>
+        </grid>
+
+        <grid>
+            <columns>
+                <column/>
+                <column flex="1"/>
+            </columns>
+            <rows>
+                <row>
+                    <label value="${XsdGenStep.outputField}"/>
+                    <textbox id="output-field" flex="1" multiline="false"/>
+                </row>
+            </rows>
+        </grid>
+
+
+    </vbox>
+</dialog>
